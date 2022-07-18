@@ -5,16 +5,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const { getCompliment } = require('./controller')
-app.get("/api/compliment", getCompliment);
 
-// My controller functions.
-// const { getFortune, updateFortune, createFortune, deleteFortune } = require('./controller')
-const {getFortune} = require('./controller')
-// My endpoints
+// Import our controller functions here
+const { getCompliment, getFortune, postMotivation, putMotivation, deleteMotivation } = require('./controller')
+
+
+// Write our endpoints here
+// STEP 3: Combine your endpoint with your function
+// REMEMBER THE FIRST /
+app.get("/api/compliment", getCompliment);
 app.get("/api/fortune", getFortune);
-// app.put("/api/fortune/:id", updateFortune)
-// app.post("/api/fortune", createFortune)
-// app.delete("/api/fortune/:id", deleteFortune)
+app.post("/api/post/motiv", postMotivation);
+app.put("/api/put/motiv/:id", putMotivation);
+app.delete("/api/delete/motiv/:id", deleteMotivation);
 
 app.listen(4000, () => console.log("Server running on 4000"));

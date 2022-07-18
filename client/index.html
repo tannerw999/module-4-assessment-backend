@@ -2,16 +2,57 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
     <button id="fortuneButton">Fortune Finder</button>
     
+    <!-- Let's create an input box and submit button for our POST -->
     <div>
-      <input id="post-input" placeholder="Data to POST"/>
-      <button id="post-button">Add your favorite fortune</button>
-   </div>
+      <h2>GET SOME MOTIVATION</h2>
+      <input id="motivationField" type="text" placeholder="Add 5 of your own here"/>
+      <button id="motivationButton">ADD THAT MOTIVATION!</button>
+    </div>
+    <!-- Let's create an input box and submit button for PUT -->
+    <div>
+      <h2>EDIT MOTIVATION</h2>
+      <select id="indexSelect">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+      <input id="editMotivation" type="text" placeholder=""/>
+      <button id="editIndex">CLICK TO EDIT</button>
+    </div>
 
+    <!-- // Let's create a dropdown box to DELETE -->
+    <div>
+      <h2>UNWATNED MOTIVATION</h2>
+      <select id="indexSelectDelete">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+      <button id="deleteButton">REMOVE</button>
+    </div>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
